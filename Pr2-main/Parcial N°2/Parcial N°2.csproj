@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{616FC30A-C2D9-456C-8836-026B163A89ED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Parcial_N_2</RootNamespace>
+    <AssemblyName>Parcial N°2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=30.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.30.0.1\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13.3\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\Clientes.cs" />
+    <Compile Include="Datos\ClientesRepositorio.cs" />
+    <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\Factura.cs" />
+    <Compile Include="Ges_Users\Admin\FrmLoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\Admin\FrmLoginAdmin.Designer.cs">
+      <DependentUpon>FrmLoginAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\Bienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\Bienvenida.Designer.cs">
+      <DependentUpon>Bienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Producto.cs" />
+    <Compile Include="facturasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="facturasForm.Designer.cs">
+      <DependentUpon>facturasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminarProductos.Designer.cs">
+      <DependentUpon>FrmEliminarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModProductos.Designer.cs">
+      <DependentUpon>FrmModProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\Admin\FrmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\Admin\FrmAdmin.Designer.cs">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\Admin\FrmAfterLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\Admin\FrmAfterLogin.Designer.cs">
+      <DependentUpon>FrmAfterLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrLoginSuperUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrLoginSuperUsers.Designer.cs">
+      <DependentUpon>FrLoginSuperUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrmAfterLoginSupUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrmAfterLoginSupUser.Designer.cs">
+      <DependentUpon>FrmAfterLoginSupUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrmEliminarAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrmEliminarAdmin.Designer.cs">
+      <DependentUpon>FrmEliminarAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrmEliminarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrmEliminarUsuario.Designer.cs">
+      <DependentUpon>FrmEliminarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrmModifAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrmModifAdmin.Designer.cs">
+      <DependentUpon>FrmModifAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrmRegistroAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrmRegistroAdmin.Designer.cs">
+      <DependentUpon>FrmRegistroAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\Admin\FrmModfUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\Admin\FrmModfUsuarios.Designer.cs">
+      <DependentUpon>FrmModfUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentanaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentanaCliente.Designer.cs">
+      <DependentUpon>FrmVentanaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarProductos.Designer.cs">
+      <DependentUpon>FrmAgregarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\FrmLoginUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\FrmLoginUsuario.Designer.cs">
+      <DependentUpon>FrmLoginUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\Admin\FrmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\Admin\FrmRegistro.Designer.cs">
+      <DependentUpon>FrmRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductos.Designer.cs">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrmVerUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ges_Users\SuperUsuario\FrmVerUsuarios.Designer.cs">
+      <DependentUpon>FrmVerUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ges_Users\Usuarios.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.cs" />
+    <Compile Include="Program_Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ges_Users\Usuarios.cs" />
+    <Compile Include="Views\aggFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\aggFactura.Designer.cs">
+      <DependentUpon>aggFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BuscarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BuscarProducto.Designer.cs">
+      <DependentUpon>BuscarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tienda.cs" />
+    <EmbeddedResource Include="Ges_Users\Admin\FrmLoginAdmin.resx">
+      <DependentUpon>FrmLoginAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\Bienvenida.resx">
+      <DependentUpon>Bienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="facturasForm.resx">
+      <DependentUpon>facturasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminarProductos.resx">
+      <DependentUpon>FrmEliminarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModProductos.resx">
+      <DependentUpon>FrmModProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\Admin\FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\Admin\FrmAfterLogin.resx">
+      <DependentUpon>FrmAfterLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\SuperUsuario\FrLoginSuperUsers.resx">
+      <DependentUpon>FrLoginSuperUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\SuperUsuario\FrmAfterLoginSupUser.resx">
+      <DependentUpon>FrmAfterLoginSupUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\SuperUsuario\FrmEliminarAdmin.resx">
+      <DependentUpon>FrmEliminarAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\SuperUsuario\FrmEliminarUsuario.resx">
+      <DependentUpon>FrmEliminarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\SuperUsuario\FrmModifAdmin.resx">
+      <DependentUpon>FrmModifAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\SuperUsuario\FrmRegistroAdmin.resx">
+      <DependentUpon>FrmRegistroAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\FrmLoginUsuario.resx">
+      <DependentUpon>FrmLoginUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\Admin\FrmRegistro.resx">
+      <DependentUpon>FrmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\Admin\FrmModfUsuarios.resx">
+      <DependentUpon>FrmModfUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentanaCliente.resx">
+      <DependentUpon>FrmVentanaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarProductos.resx">
+      <DependentUpon>FrmAgregarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductos.resx">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ges_Users\SuperUsuario\FrmVerUsuarios.resx">
+      <DependentUpon>FrmVerUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\aggFactura.resx">
+      <DependentUpon>aggFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BuscarProducto.resx">
+      <DependentUpon>BuscarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Productos.json" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo PR2 arreglado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-30465_640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-30465_6401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-30465_640-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo PR21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users-alt %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users-alt %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user - copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-invoice1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-invoice2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dots_three_circle_vertical_icon_173866.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-30465_640-removebg-preview-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-de-retorno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-de-retorno1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen de WhatsApp 2023-10-22 a las 13.04.04_06f76646.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen de WhatsApp 2023-10-22 a las 13.04.04_06f766461.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plantilla.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagesEliminar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

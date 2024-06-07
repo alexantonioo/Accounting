@@ -1,0 +1,10 @@
+Name,Price,Stock,Tax,Description,Discount,ID
+Arroz,"2,5",10,1,Arroz blanco de grano largo,0,1
+Frijoles,"1,5",10,1,Frijoles negros de alta calidad,0,2
+Leche,3,10,1,Leche entera pasteurizada,0,3
+Huevos,2,10,1,Huevos frescos de gallinas libres,0,4
+Harina de trigo,2,10,1,Harina de trgo de todo uso,0,5
+Azucar blanca,"1,5",10,1,Azucar blanca granulada,0,6
+Jabon en polvo,5,10,1,Jabon para lavar ropa blanca,0,7
+Detergente,5,10,1,Detergente liquido para lavar platos ,0,8
+Limpiador multiusos,3,10,1,Limpiador multiusos para superficies duras ,0,9
